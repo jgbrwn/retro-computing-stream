@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
     const imageMatch =
       html.match(/<img[^>]*class="[^"]*item-image[^"]*"[^>]*src="([^"]*)"/) ||
       // html.match(/<div[^>]*id="theatre-ia-wrap"[^ {2}|| // caused syntax error
-	  html.match(/<div[^>]*id="theatre-ia-wrap"[^ {2}/) ||
+	  // html.match(/<div[^>]*id="theatre-ia-wrap"[^ {2}/) || // try removing line altogether
       html.match(/<div[^>]*id="theatre-ia-wrap"[^>]*>[\s\S]*?<img[^>]*src="([^"]*)"/) ||
       html.match(/<div[^>]*class="[^"]*item-image-carousel[^"]*"[^>]*>[\s\S]*?<img[^>]*src="([^"]*)"/)
 
